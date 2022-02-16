@@ -15,7 +15,7 @@
 - [Barème](#bareme)
 - [Annexe: Guide et normes de codage](#annexe)
 
-:alarm_clock: [Date de remise le Dimanche 31 Octobre 23h59][0]
+:alarm_clock: [Date de remise le Dimanche 06 Mars 23h59]
 
 ## Directives particulières <a name="directives"></a>
 * Respecter [guide de codage](https://github.com/INF1007-Gabarits/Guide-codage-python) et les normes pep8;
