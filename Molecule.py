@@ -29,7 +29,7 @@ def deplacerMolecule(mol):
 #####################################################
 # Donner
 #####################################################
-def ajusteDirApresCollision(mol_1, mol_2)
+def ajusteDirApresCollision(mol_1, mol_2):
     deltaX = mol_2['x'] - mol_1['x']
     dVx = 0;
 
