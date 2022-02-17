@@ -1,5 +1,6 @@
 import Molecule as molec
 import Reservoir as res
+import matplotlib.pyplot as plt
 
 
 import unittest
@@ -138,7 +139,7 @@ class TestReservoir(unittest.TestCase):
     def test26_deplacerMolecules(self):
         reservoir = {'h': 200, 'l': 800, 'posPar': 500, 'mG': [{'x': 16, 'y': 172, 'dx': -20, 'dy': 16, 'rayon': 16}, {'x': 484, 'y': 124, 'dx': 21, 'dy': -25, 'rayon': 16}, {'x': 150, 'y': 20, 'dx': 18, 'dy': -14, 'rayon': 20}, {'x': 337, 'y': 184, 'dx': 27, 'dy': -5, 'rayon': 16}, {'x': 26, 'y': 26, 'dx': 19, 'dy': 1, 'rayon': 26}, {'x': 351, 'y': 111, 'dx': -4, 'dy': 44, 'rayon': 24}, {'x': 265, 'y': 132, 'dx': 25, 'dy': 25, 'rayon': 18}, {'x': 365, 'y': 150, 'dx': 22, 'dy': -1, 'rayon': 12}, {'x': 428, 'y': 65, 'dx': 33, 'dy': 9, 'rayon': 22}, {'x': 61, 'y': 106, 'dx': -54, 'dy': 19, 'rayon': 28}], 'mD': [{'x': 684, 'y': 38, 'dx': 10, 'dy': 38, 'rayon': 20}, {'x': 520, 'y': 180, 'dx': 17, 'dy': 10, 'rayon': 20}, {'x': 786, 'y': 38, 'dx': -7, 'dy': 22, 'rayon': 14}, {'x': 622, 'y': 10, 'dx': -16, 'dy': -6, 'rayon': 10}, {'x': 516, 'y': 167, 'dx': 30, 'dy': 18, 'rayon': 16}], 'lCG': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'lCD': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
         result = {'h': 200, 'l': 800, 'posPar': 500, 'mG': [{'x': 36, 'y': 188, 'dx': 20, 'dy': 16, 'rayon': 16}, {'x': 463, 'y': 99, 'dx': -17.95389507154213, 'dy': 13.076311605723376, 'rayon': 16}, {'x': 168, 'y': 34, 'dx': 18, 'dy': 14, 'rayon': 20}, {'x': 364, 'y': 189, 'dx': 36.4, 'dy': 23.8, 'rayon': 16}, {'x': 7, 'y': 25, 'dx': -19, 'dy': -1, 'rayon': 26}, {'x': 347, 'y': 155, 'dx': -13.4, 'dy': 25.2, 'rayon': 24}, {'x': 290, 'y': 157, 'dx': 25, 'dy': 25, 'rayon': 18}, {'x': 387, 'y': 149, 'dx': 22, 'dy': -1, 'rayon': 12}, {'x': 461, 'y': 74, 'dx': 29.95389507154213, 'dy': -29.076311605723376, 'rayon': 22}, {'x': 7, 'y': 125, 'dx': -54, 'dy': 19, 'rayon': 28}], 'mD': [{'x': 694, 'y': 76, 'dx': 10, 'dy': 38, 'rayon': 20}, {'x': 503, 'y': 170, 'dx': -38.20038910505836, 'dy': 8.706225680933851, 'rayon': 20}, {'x': 793, 'y': 60, 'dx': 7, 'dy': 22, 'rayon': 14}, {'x': 606, 'y': 16, 'dx': -16, 'dy': 6, 'rayon': 10}, {'x': 486, 'y': 185, 'dx': -8.799610894941633, 'dy': -0.7062256809338514, 'rayon': 16}], 'lCG': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 'lCD': [0, 0, 0, 0, 0, 0, 1, 0, 0, 0]}
-        reservoir = res.deplacerMolecules(reservoir)
+        reservoir = res.deplacerMolecules(reservoir, plt.figure().add_subplot())
         self.assertEqual(reservoir, result)
 
 if __name__ == '__main__':
